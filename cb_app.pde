@@ -1,26 +1,26 @@
 /*
- * Author:        Marius Jigoreanu
- * Last edited:   22 May 2013 17:22:19
- * Web:           http://jima.ro
- * Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
- */
+* Author:        Marius Jigoreanu
+* Last edited:   22 May 2013 17:22:19
+* Web:           http://jima.ro
+* Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
+*/
 
 
- Breather   breather;
- HashMap    emotions;
- 
- void setup() {
+Breather   breather;
+HashMap    emotions;
 
- 	setXmlData();
- 	breather = new Breather();
- 	size( 1100, 600 );
- 	frameRate( 60 );
-  initGui();
- }
+void setup() {
 
- void draw() {
+	setXmlData();
+	breather = new Breather();
+	size( 1100, 600 );
+	frameRate( 60 );
+	initGui();
+}
 
- 	breather.breathe();
- 	breather.draw();
- 	drawGuiBg();
- }
+void draw() {
+
+	breather.breathe();
+	breather.draw();
+	drawGuiBg();
+}

@@ -1,68 +1,71 @@
 /*
- * Author:        Marius Jigoreanu
- * Last edited:   14 May 2013 19:05:45
- * Web:           http://jima.ro
- * Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
- */
+* Author:        Marius Jigoreanu
+* Last edited:   14 May 2013 19:05:45
+* Web:           http://jima.ro
+* Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
+*/
 
 
- void setXmlData() {
+void setXmlData() {
 
  	emotions = new HashMap();
  	XML data = loadXML( "definitions.xml" );
  	xmlToColorMode( data.getChild( "config/color-mode" ) );
- 	for( XML emotion : data.getChildren( "emotions/emotion" ) ) {
+ 	for( XML emotionXml : data.getChildren( "emotions/emotion" ) ) {
 
- 		Emotion emotion = xmlToEmotion( emotion );
+ 		Emotion emotion = xmlToEmotion( emotionXml );
 		emotions.put( emotion.getName(), emotion );
 	}
 }
 
-void xmlToColorMode(XML colorMode) {
-
-	int mode = int(colorMode.getChild("mode").getContent());
-	int maxFirst = int(colorMode.getChild("max1").getContent());
-	int maxSecond = int(colorMode.getChild("max2").getContent());
-	int maxThird = int(colorMode.getChild("max3").getContent());
-
-	colorMode(mode, maxFirst, maxSecond, maxThird);
-}
-
-Emotion xmlToEmotion(XML emotion) {
+Emotion xmlToEmotion( XML emotionXml ) {
 
 	return new Emotion (
 
-		emotion.getChild( "name" ).getContent(),
-		xmlToColor( emotion.getChild( "color" ) ),
-		xmlToColor( emotion.getChild( "color" ) ),
-		xmlToMask( emotion.getChild( "color" ) ),
-		xmlToBreath( emotion.getChild( "breath" ) )
+		emotionXml.getChild( "name" ).getContent(),
+		xmlToColor( emotionXml.getChild( "color" ) ),
+		xmlToColor( emotionXml.getChild( "color" ) ),
+		xmlToMask( emotionXml.getChild( "color" ) ),
+		xmlToBreath( emotionXml.getChild( "breath" ) )
 	);
 }
 
-color xmlToColor(XML colorData) {
+color xmlToColor( XML colorXml ) {
 
 	return color (
 
-		( int )colorData.getChild( "hue" ).getContent(),
-		( int )colorData.getChild( "saturation" ).getContent(),
-		( int )colorData.getChild( "brightness" ).getContent()
+		int( colorXml.getChild( "hue" 				).getContent() ),
+		int( colorXml.getChild( "saturation" ).getContent() ),
+		int( colorXml.getChild( "brightness" ).getContent() )
 	);
 }
 
-Mask xmlToMask(XML maskData) {
+Mask xmlToMask( XML maskXml ) {
 
-	float radiusMin = ( float ) maskData.getChild( "radius/minimum" ).getContent();
-	float radiusMax = ( float ) maskData.getChild( "radius/maximum" ).getContent();
-	color col = xmlToColor( maskData.getChild( "color" ) );
+	return new Mask (
 
-	return new Mask( col, radiusMin, radiusMax );
+		xmlToColor( maskXml.getChild( "color" ) ),
+		float( maskXml.getChild( "radius/minimum" ).getContent() ),
+		float( maskXml.getChild( "radius/maximum" ).getContent() )
+	);
 }
 
-Breath xmlToBreath( XML breathData ) {
+Breath xmlToBreath( XML breatXml ) {
 
-	float duration = breathData.getContent( "duration" ).getContent();
-	float repeate = breathData.getContent( "repeate" ).getContent();
+	return new Breath (
 
-	return new Breath( duration, repeate );
+		float( breatXml.getChild( "duration" ).getContent() ),
+		int  ( breatXml.getChild( "repeate"  ).getContent() )
+	);
+}
+
+void xmlToColorMode( XML colorModeXml ) {
+
+	colorMode (
+
+		int( colorModeXml.getChild("mode").getContent() ),
+		int( colorModeXml.getChild("max1").getContent() ),
+		int( colorModeXml.getChild("max2").getContent() ),
+		int( colorModeXml.getChild("max3").getContent() )
+	);
 }

@@ -1,15 +1,84 @@
 /*
- * Author:        Marius Jigoreanu
- * Last edited:   14 May 2013 19:05:56
- * Web:           http://jima.ro
- * Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
- */
+* Author:        Marius Jigoreanu
+* Last edited:   14 May 2013 19:05:56
+* Web:           http://jima.ro
+* Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
+*/
 
 
+class Emotion {
 
- /***  Breath  *****************************************/
+  private String name;
+  private color colorPrimary;
+  private color colorSecondary;
+  private Mask mask;
+  private Breath breath;
 
- class Breath extends BreathData {
+  public Emotion ( String name, color colorPrimary, color colorSecondary, Mask mask, Breath breath ) {
+
+    this.name = name;
+    this.colorPrimary = colorPrimary;
+    this.colorSecondary = colorSecondary;
+    this.mask = mask;
+    this.breath = breath;
+  }
+
+  public void update() {
+
+    mask.update();
+  }
+
+  public void draw() {
+
+    background( breath.getColor() );
+    mask.draw();
+  }
+
+  public String getName() {
+
+    return name;
+  }
+}
+
+
+class Mask {
+
+  private color col;
+  private float radiusMin;
+  private float radiusMax;
+  private PImage maskImage; // temporary until i figure out how to generate it
+  
+  public Mask( color col, float radiusMin, float radiusMax ) {
+
+    this.col = col;
+    this.radiusMin = radiusMin;
+    this.radiusMax = radiusMax;
+
+    init();
+  }
+
+  private void init() {
+
+    maskImage = loadImage("mask.png");
+  }
+
+  public void update() {
+
+  }
+
+  public void draw() {
+
+    image( maskImage, 0, 0 );
+  }
+}
+
+
+class Breath extends BreathData {
+
+  public Breath( float duration, int repeate ) {
+
+    super();
+  }
 
   public Breath( BreathData breathData ) {
 
@@ -79,16 +148,9 @@
     return currentColor;
   }
 
-  public PImage getMask() {
-
-    return mask.getMask();
-  }
+  public void draw() {}
 }
 
-
-
-
-/***  BreathData  *****************************************/
 
 class BreathData {
 
@@ -118,6 +180,8 @@ class BreathData {
   protected float currentTime, spanDuration;
   protected int repeate;
 
+  public BreathData() { }
+
   public BreathData( BreathData bd ) {
 
     name = bd.name;
@@ -133,8 +197,7 @@ class BreathData {
 
   public BreathData( String name, Mask mask, color baseColor, float spanDuration, 
     int repeate, BreathPropertySet saturationSet, BreathPropertySet brightnessSet, 
-    BreathPropertySet breakPointSet, BreathPropertySet smoothnessSet)
-  {
+    BreathPropertySet breakPointSet, BreathPropertySet smoothnessSet) {
 
     this.name = name;
     this.mask = mask;
@@ -214,10 +277,6 @@ class BreathData {
 }
 
 
-
-
-/***  BreathPropertySet  *****************************************/
-
 class BreathPropertySet {
 
   public ArrayList<BreathProperty> set;
@@ -237,10 +296,6 @@ class BreathPropertySet {
   }
 }
 
-
-
-
-/***  BreathProperty  *****************************************/
 
 class BreathProperty {
 
@@ -269,37 +324,4 @@ class BreathProperty {
 
     return value;
   }
-}
-
-class Mask {
-
-  private color col;
-  private float radiusMin;
-  private float radiusMax;
-  private PImage maskImage;
-  
-  public Mask( color col, float radiusMin, float radiusMax ) {
-
-    this.col = col;
-    this.radiusMin = radiusMin;
-    this.radiusMax = radiusMax;
-  }
-
-  public void generateMask() {
-
-
-  }
-
-  public PImage getMask() {
-
-    return maskImage;
-  }
-}
-
-class Emotion {
-
-  private String name;
-  private color colorPrimary;
-  private color colorSecondary;
-  private Mask mask;
 }

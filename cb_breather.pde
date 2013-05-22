@@ -1,24 +1,24 @@
 /*
- * Author:        Marius Jigoreanu
- * Last edited:   14 May 2013 19:07:19
- * Web:           http://jima.ro
- * Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
- */
+* Author:        Marius Jigoreanu
+* Last edited:   14 May 2013 19:07:19
+* Web:           http://jima.ro
+* Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
+*/
 
 
- public static class STATE {
+static class STATE {
 
   public final static int BREATHING = 0;
   public final static int PAUSE = 1;
   public final static int STOP = 2;
 }
 
-public class Breather {
+class Breather {
 
   private int                 state;
   private int                 index;
-  private Breath              breath;
-  private ArrayList<Breath>   story;
+  private Emotion             emotion;
+  private ArrayList<Emotion>  story;
   private boolean             repeate;
 
   public Breather() {
@@ -26,17 +26,17 @@ public class Breather {
     init();
   }
 
-  public Breather( Breath b ) {
+  public Breather( Emotion emotion ) {
 
     init();
-    breath                  = b;
+    this.emotion            = emotion;
   }
 
-  public Breather( ArrayList<Breath> s ) {
+  public Breather( ArrayList<Emotion> story ) {
 
     init();
-    story                   = s;
-    breath                  = s.get(index);
+    this.story              = story;
+    this.emotion            = story.get( index );
   }
 
   private void init() {
@@ -50,7 +50,7 @@ public class Breather {
 
     if ( state == STATE.BREATHING ) {
 
-      if ( breath.isEnded() ) {
+      if ( emotion.breath.isEnded() ) {
 
         if ( story != null ) {
 
@@ -58,24 +58,21 @@ public class Breather {
           else if ( repeate )          index = 0;
           else                         stop();
 
-          breath = story.get( index );
+          emotion = story.get( index );
         }
-        else if ( repeate ) breath.reset();
+        else if ( repeate ) emotion.breath.reset();
         else                stop();
       }
       else {
 
-        breath.update();
+        emotion.update();
       }
     }
   }
 
   public void pause() {
 
-    if (state == STATE.PAUSE)
-    state = STATE.BREATHING;
-    else
-    state = STATE.PAUSE;
+    state = (state == STATE.PAUSE) ? STATE.BREATHING : STATE.PAUSE;
   }
 
   public void stop() {
@@ -85,23 +82,21 @@ public class Breather {
 
   public void draw() {
 
-    if (breath == null) return; 
-    background(breath.getColor());
-    image(breath.getMask(), 0, 0);
+    if ( emotion != null ) emotion.draw();
   }
 
-  public void setBreath( BreathData bd ) {
+  public void setEmotion( Emotion emotion ) {
 
     init();
     story = null;
-    breath = new Breath(bd);
+    this.emotion = emotion;
     state = STATE.BREATHING;
   }
 
-  public void setStory( ArrayList<Breath> s ) {
+  public void setStory( ArrayList<Emotion> story ) {
 
     init();
-    story = s;
-    breath = s.get(index);
+    this.story      = story;
+    this.emotion    = story.get( index );
   }
 }

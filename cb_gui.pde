@@ -1,18 +1,15 @@
 /*
- * Author:        Marius Jigoreanu
- * Last edited:   14 May 2013 19:07:13
- * Web:           http://jima.ro
- * Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
- */
+* Author:        Marius Jigoreanu
+* Last edited:   14 May 2013 19:07:13
+* Web:           http://jima.ro
+* Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
+*/
 
 
  import controlP5.*;
 
  ControlP5 cp5;
-
- RadioButton basicMild;
  RadioButton basicNormal;
- RadioButton basicIntense;
 
  int uiBgWidth = 90;
  int uiRound = 10;
@@ -46,14 +43,14 @@ void basicNormalRb(int a) {
 
   switch( a ) {
 
-    case( 1 ) : breather.setBreath( ( Emotion ) emotions.get( "anger"         ) ); break;
-    case( 2 ) : breather.setBreath( ( Emotion ) emotions.get( "anticipation"  ) ); break;
-    case( 3 ) : breather.setBreath( ( Emotion ) emotions.get( "joy"           ) ); break;
-    case( 4 ) : breather.setBreath( ( Emotion ) emotions.get( "thrust"        ) ); break;
-    case( 5 ) : breather.setBreath( ( Emotion ) emotions.get( "fear"          ) ); break;
-    case( 6 ) : breather.setBreath( ( Emotion ) emotions.get( "surprise"      ) ); break;
-    case( 7 ) : breather.setBreath( ( Emotion ) emotions.get( "sadness"       ) ); break;
-    case( 8 ) : breather.setBreath( ( Emotion ) emotions.get( "disgust"       ) ); break;
+    case( 1 ) : breather.setEmotion( ( Emotion ) emotions.get( "anger"         ) ); break;
+    case( 2 ) : breather.setEmotion( ( Emotion ) emotions.get( "anticipation"  ) ); break;
+    case( 3 ) : breather.setEmotion( ( Emotion ) emotions.get( "joy"           ) ); break;
+    case( 4 ) : breather.setEmotion( ( Emotion ) emotions.get( "thrust"        ) ); break;
+    case( 5 ) : breather.setEmotion( ( Emotion ) emotions.get( "fear"          ) ); break;
+    case( 6 ) : breather.setEmotion( ( Emotion ) emotions.get( "surprise"      ) ); break;
+    case( 7 ) : breather.setEmotion( ( Emotion ) emotions.get( "sadness"       ) ); break;
+    case( 8 ) : breather.setEmotion( ( Emotion ) emotions.get( "disgust"       ) ); break;
   }
 }
 
