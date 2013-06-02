@@ -1,13 +1,3 @@
-<!--
-/*
-* Author:        Marius Jigoreanu
-* Last edited:   14 May 2013 00:31:54
-* Web:           jima.ro
-* Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
-*/
--->
-
-
 <?xml version="1.0"?>
 <root>
 
@@ -29,18 +19,18 @@
 				<description>Iritation and distraction from one's concious thinking</description>
 			</info>
 			<name>annoyance</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -64,18 +54,18 @@
 				<description>Concern with or curiosity about something</description>
 			</info>
 			<name>interest</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -99,18 +89,18 @@
 				<description>The absence of mental stress or anxiety</description>
 			</info>
 			<name>serenity</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -134,18 +124,18 @@
 				<description>Tolerant of people and situations</description>
 			</info>
 			<name>acceptance</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -169,18 +159,18 @@
 				<description>Anticipation of the negative</description>
 			</info>
 			<name>apprehension</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -204,18 +194,18 @@
 				<description>Diverted attention</description>
 			</info>
 			<name>distraction</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -239,18 +229,18 @@
 				<description>Persistent meditation on a problem</description>
 			</info>
 			<name>pensiveness</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -274,18 +264,18 @@
 				<description>Lack of interest in surrounding opportunities</description>
 			</info>
 			<name>boredom</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -322,18 +312,18 @@
 				<description>Belligerence aroused by a real or supposed wrong</description>
 			</info>
 			<name>anger</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>355</hue>
 				<saturation>59</saturation>
 				<brightness>84</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0.9</minimum>
@@ -357,18 +347,18 @@
 				<description>Confident prediction</description>
 			</info>
 			<name>anticipation</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>9</hue>
 				<saturation>58</saturation>
 				<brightness>90</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0.9</minimum>
@@ -392,18 +382,18 @@
 				<description>Great Happiness</description>
 			</info>
 			<name>joy</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>47</hue>
 				<saturation>60</saturation>
 				<brightness>92</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0.9</minimum>
@@ -427,18 +417,18 @@
 				<description>Beliving in the honesty and reliability of others</description>
 			</info>
 			<name>trust</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>88</hue>
 				<saturation>44</saturation>
 				<brightness>76</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0.9</minimum>
@@ -462,18 +452,18 @@
 				<description>Expecttation of thread and danger</description>
 			</info>
 			<name>fear</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>125</hue>
 				<saturation>17</saturation>
 				<brightness>44</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0.9</minimum>
@@ -497,18 +487,18 @@
 				<description>Astonishment at the unexpected</description>
 			</info>
 			<name>surprise</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>209</hue>
 				<saturation>38</saturation>
 				<brightness>74</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0.9</minimum>
@@ -532,18 +522,18 @@
 				<description>Feelings of disadvantage, loss and helplessness</description>
 			</info>
 			<name>sadness</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>220</hue>
 				<saturation>30</saturation>
 				<brightness>76</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0.9</minimum>
@@ -567,18 +557,18 @@
 				<description>Ofended in a moral or ethical sense</description>
 			</info>
 			<name>disgust</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>267</hue>
 				<saturation>29</saturation>
 				<brightness>70</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0.9</minimum>
@@ -617,18 +607,18 @@
 				<description>Intense fury, coupled with the seeking of some harm</description>
 			</info>
 			<name>rage</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -652,18 +642,18 @@
 				<description>Obsesive watchfulness</description>
 			</info>
 			<name>vigilance</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -687,18 +677,18 @@
 				<description>Being carried away by overwhelming bliss</description>
 			</info>
 			<name>ecstacy</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -722,18 +712,18 @@
 				<description>Delighted approval and liking</description>
 			</info>
 			<name>admiration</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -757,18 +747,18 @@
 				<description>Overpowering panic or dread</description>
 			</info>
 			<name>terror</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -792,18 +782,18 @@
 				<description>Overwhelming wonder</description>
 			</info>
 			<name>amazement</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -827,18 +817,18 @@
 				<description>Intense sorrow</description>
 			</info>
 			<name>grief</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>
@@ -862,18 +852,18 @@
 				<description>Abhorence: hate coupled with disgust</description>
 			</info>
 			<name>loathing</name>
-			<color>
+			<color-primary>
 				<scope>primary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
-			<color>
+			</color-primary>
+			<color-secondary>
 				<scope>secondary</scope>
 				<hue>0</hue>
 				<saturation>0</saturation>
 				<brightness>0</brightness>
-			</color>
+			</color-secondary>
 			<mask>
 				<radius>
 					<minimum>0</minimum>

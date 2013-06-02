@@ -6,28 +6,19 @@
 */
 
 
- import controlP5.*;
+import controlP5.*;
 
- ControlP5 cp5;
- RadioButton basicNormal;
+ControlP5 cp5;
+RadioButton basicNormal;
 
- int uiBgWidth = 90;
- int uiRound = 10;
- int lRightPosX = width - 172;
+int uiBgWidth = 90;
+int uiRound = 10;
 
-
- void drawGuiBg() {
+void drawGuiBg() {
 
   noStroke();
-  fill(267, 28, 24);
-  rect(width - uiBgWidth, 0, uiBgWidth, height, uiRound, 0, 0, uiRound);
-  rect(lRightPosX, 7, 82, 15, 4, 0, 0, 4);
-  rect(lRightPosX, 107, 82, 15, 4, 0, 0, 4);
-  rect(lRightPosX, 207, 82, 15, 4, 0, 0, 4);
-  rect(lRightPosX, 307, 82, 15, 4, 0, 0, 4);
-  rect(lRightPosX, 407, 82, 15, 4, 0, 0, 4);
-  rect(lRightPosX, 507, 82, 15, 4, 0, 0, 4);
-  rect(lRightPosX, 507, 82, 15, 4, 0, 0, 4);
+  fill(0, 0, 50);
+  rect(width - uiBgWidth, 0, uiBgWidth, 100, uiRound, 0, 0, uiRound);
 }
 
 
@@ -61,7 +52,7 @@ void initGui() {
 
   basicNormal = cp5
   .addRadioButton("basicNormalRb")
-  .setPosition(width - 80, 110)
+  .setPosition(width - 80, 10)
   .addItem("anger", 1)
   .addItem("anticipation", 2)
   .addItem("joy", 3)

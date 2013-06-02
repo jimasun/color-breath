@@ -23,20 +23,10 @@ Emotion xmlToEmotion( XML emotionXml ) {
 	return new Emotion (
 
 		emotionXml.getChild( "name" ).getContent(),
-		xmlToColor( emotionXml.getChild( "color" ) ),
-		xmlToColor( emotionXml.getChild( "color" ) ),
-		xmlToMask( emotionXml.getChild( "color" ) ),
+		xmlToColor( emotionXml.getChild( "color-primary" ) ),
+		xmlToColor( emotionXml.getChild( "color-secondary" ) ),
+		xmlToMask( emotionXml.getChild( "mask" ) ),
 		xmlToBreath( emotionXml.getChild( "breath" ) )
-	);
-}
-
-color xmlToColor( XML colorXml ) {
-
-	return color (
-
-		int( colorXml.getChild( "hue" 				).getContent() ),
-		int( colorXml.getChild( "saturation" ).getContent() ),
-		int( colorXml.getChild( "brightness" ).getContent() )
 	);
 }
 
@@ -47,6 +37,16 @@ Mask xmlToMask( XML maskXml ) {
 		xmlToColor( maskXml.getChild( "color" ) ),
 		float( maskXml.getChild( "radius/minimum" ).getContent() ),
 		float( maskXml.getChild( "radius/maximum" ).getContent() )
+	);
+}
+
+color xmlToColor( XML colorXml ) {
+
+	return color (
+
+		int( colorXml.getChild( "hue" 			 ).getContent() ),
+		int( colorXml.getChild( "saturation" ).getContent() ),
+		int( colorXml.getChild( "brightness" ).getContent() )
 	);
 }
 
