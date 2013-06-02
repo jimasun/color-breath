@@ -1,6 +1,6 @@
 /*
 * Author:        Marius Jigoreanu
-* Last edited:   14 May 2013 19:05:45
+* Last edited:   02 Jun 2013 19:11:50
 * Web:           http://jima.ro
 * Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
 */
@@ -23,8 +23,6 @@ Emotion xmlToEmotion( XML emotionXml ) {
 	return new Emotion (
 
 		emotionXml.getChild( "name" ).getContent(),
-		xmlToColor( emotionXml.getChild( "color-primary" ) ),
-		xmlToColor( emotionXml.getChild( "color-secondary" ) ),
 		xmlToMask( emotionXml.getChild( "mask" ) ),
 		xmlToBreath( emotionXml.getChild( "breath" ) )
 	);
@@ -40,6 +38,17 @@ Mask xmlToMask( XML maskXml ) {
 	);
 }
 
+Breath xmlToBreath( XML breatXml ) {
+
+	return new Breath (
+
+		xmlToColor( breatXml.getChild( "color-primary" ) ),
+		xmlToColor( breatXml.getChild( "color-secondary" ) ),
+		float( breatXml.getChild( "duration" ).getContent() ),
+		int  ( breatXml.getChild( "repeate"  ).getContent() )
+	);
+}
+
 color xmlToColor( XML colorXml ) {
 
 	return color (
@@ -47,15 +56,6 @@ color xmlToColor( XML colorXml ) {
 		int( colorXml.getChild( "hue" 			 ).getContent() ),
 		int( colorXml.getChild( "saturation" ).getContent() ),
 		int( colorXml.getChild( "brightness" ).getContent() )
-	);
-}
-
-Breath xmlToBreath( XML breatXml ) {
-
-	return new Breath (
-
-		float( breatXml.getChild( "duration" ).getContent() ),
-		int  ( breatXml.getChild( "repeate"  ).getContent() )
 	);
 }
 

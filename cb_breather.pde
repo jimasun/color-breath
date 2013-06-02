@@ -23,27 +23,27 @@ class Breather {
 
   public Breather() {
 
-    init();
+    reset();
   }
 
   public Breather( Emotion emotion ) {
 
-    init();
+    reset();
     this.emotion            = emotion;
   }
 
   public Breather( ArrayList<Emotion> story ) {
 
-    init();
+    reset();
     this.story              = story;
     this.emotion            = story.get( index );
   }
 
-  private void init() {
+  private void reset() {
 
     state                   = STATE.STOP;
     index                   = 0;
-    repeate                 = true;
+    //repeate                 = true;
   }
 
   public void breathe() {
@@ -77,7 +77,7 @@ class Breather {
 
   public void stop() {
 
-    init();
+    reset();
   }
 
   public void draw() {
@@ -87,15 +87,16 @@ class Breather {
 
   public void setEmotion( Emotion emotion ) {
 
-    init();
+    reset();
     story = null;
     this.emotion = emotion;
+    this.emotion.breath.reset();
     state = STATE.BREATHING;
   }
 
   public void setStory( ArrayList<Emotion> story ) {
 
-    init();
+    reset();
     this.story      = story;
     this.emotion    = story.get( index );
   }
