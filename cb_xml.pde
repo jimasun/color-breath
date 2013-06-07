@@ -1,6 +1,6 @@
 /*
 * Author:        Marius Jigoreanu
-* Last edited:   02 Jun 2013 19:11:50
+* Last edited:   07 Jun 2013 14:12:05
 * Web:           http://jima.ro
 * Email:         marius.jigoreanu@gmail.com | mjig@itu.dk
 */
@@ -49,9 +49,9 @@ Breath xmlToBreath( XML breatXml ) {
 	);
 }
 
-color xmlToColor( XML colorXml ) {
+Color xmlToColor( XML colorXml ) {
 
-	return color (
+	return new Color (
 
 		int( colorXml.getChild( "hue" 			 ).getContent() ),
 		int( colorXml.getChild( "saturation" ).getContent() ),

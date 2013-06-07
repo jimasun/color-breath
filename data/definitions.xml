@@ -326,19 +326,19 @@
 				</color>
 			</mask>
 			<breath>
-				<duration>500</duration>
+				<duration>1000</duration>
 				<repeate>10</repeate>
 				<color-primary>
 					<scope>primary</scope>
 					<hue>355</hue>
-					<saturation>59</saturation>
-					<brightness>84</brightness>
+					<saturation>80</saturation>
+					<brightness>80</brightness>
 				</color-primary>
 				<color-secondary>
 					<scope>secondary</scope>
-					<hue>0</hue>
-					<saturation>0</saturation>
-					<brightness>0</brightness>
+					<hue>355</hue>
+					<saturation>100</saturation>
+					<brightness>20</brightness>
 				</color-secondary>
 			</breath>
 		</emotion>
